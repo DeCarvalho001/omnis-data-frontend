@@ -6,7 +6,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: false,
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['lucide-react', 'recharts'],
+        },
+      },
+    },
   },
   plugins: [react()],
   server: {
