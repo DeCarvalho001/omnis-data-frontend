@@ -43,8 +43,8 @@ export default function Layout() {
       <div className="main-area">
         <header className="header">
           <div className="header-left">
-            <button className="btn btn-ghost btn-sm" onClick={() => setSidebarOpen(true)}
-              style={{ display: 'none' }} className="mobile-menu-btn">
+            <button className="mobile-menu-btn btn btn-ghost btn-sm" onClick={() => setSidebarOpen(true)}
+                style={{ display: "none" }}>
               <Menu size={20} />
             </button>
             <form onSubmit={handleSearch} style={{ display: 'flex', alignItems: 'center' }}>
